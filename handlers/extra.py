@@ -1,10 +1,6 @@
 import random
-from typing import List
-
 from aiogram import types, Dispatcher
 from config import bot
-
-
 from config import ADMINS
 
 
@@ -24,4 +20,3 @@ async def echo(message: types.Message):
 
 def register_message_handler(dp: Dispatcher):
     dp.register_message_handler(echo)
-

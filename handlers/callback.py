@@ -8,8 +8,6 @@ async def quiz_2(call: types.CallbackQuery):
     markup = InlineKeyboardMarkup()
     button_call_2 = InlineKeyboardButton("NEXT", callback_data='button_call_2')
     markup.add(button_call_2)
-
-
     question = "Флаг какой страны изображен на картинке?"
     answers = [
         'Великобритания',
@@ -56,6 +54,7 @@ async def quiz_3(call: types.CallbackQuery):
         explanation="Непал",
         open_period=60,
     )
+
 
 def register_handlers_callback(dp: Dispatcher):
     dp.register_callback_query_handler(quiz_2, text="button_call_1")
